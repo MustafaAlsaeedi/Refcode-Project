@@ -44,6 +44,9 @@ a {
 .cancelbtn,.signupbtn {
     float: left;
     width: 50%;
+    margin: 0;
+    border: 1px solid;
+    border-radius: 10px;
 }
 
 /* Add padding to container elements */
@@ -57,10 +60,12 @@ a {
 .clearfix::after {
     content: "";
     clear: both;
-    display: table;
+    display: flex;
+
+
 }
 
-/* Change styles for cancel button and signup button on extra small screens */
+/* Change styles for cancel button and redister button on extra small screens */
 @media screen and (max-width: 300px) {
     .cancelbtn, .signupbtn {
        width: 100%;
@@ -73,6 +78,15 @@ a {
 
 <form action="/action_page.php" style="border:1px solid #ccc">
   <div class="container">
+    <label><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="firstname" required>
+
+    <label><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last Name" name="lastname" required>
+
+    <label><b>Phone Number</b></label>
+    <input type="text" placeholder="Enter Phone Number" name="Phone Number" required>
+
     <label><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
 
@@ -86,7 +100,7 @@ a {
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <button type="submit" class="signupbtn">Register</button>
     </div>
   </div>
 </form>
